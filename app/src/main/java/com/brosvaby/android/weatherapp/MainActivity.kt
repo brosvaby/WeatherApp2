@@ -45,11 +45,11 @@ class MainActivity : AppCompatActivity() {
         viewModel.states.observe(this, Observer { pState ->
             when (pState) {
                 is CityViewModel.CallWeather -> {
-                    if (pState.city == "London") viewModel.getCityList("Seoul")
-                    if (pState.city == "Seoul") viewModel.getCityList("Chicago")
+                    if (pState.city == "Seoul") viewModel.getCityList("London")
+                    if (pState.city == "London") viewModel.getCityList("Chicago")
                 }
             }
         })
-        viewModel.getCityList("London")
+        viewModel.getCityList("Seoul")
     }
 }

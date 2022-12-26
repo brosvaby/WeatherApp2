@@ -83,8 +83,11 @@ class CityAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerV
                 "Tomorrow"
             } else {
                 val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
-                val current = LocalDate.parse(item.dt_txt, formatter).dayOfWeek
-                current.getDisplayName(TextStyle.SHORT, Locale.US)
+                val parsedDay = LocalDate.parse(item.dt_txt, formatter)
+                val first = parsedDay.dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.US)
+                val second = parsedDay.dayOfMonth
+                val third = parsedDay.month.getDisplayName(TextStyle.SHORT, Locale.US)
+                "$first $second $third"
             }
             tvStatus.text = item.weather[0].main
             tvMax.text = "Max: ${item.main.temp_max.toInt()} ℃"
