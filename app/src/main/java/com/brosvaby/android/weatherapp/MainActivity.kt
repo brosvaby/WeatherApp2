@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-        viewModel.getCityList("Seoul")
+        viewModel.getCityList2()
+        viewModel.getCityList2()
     }
 }
