@@ -10,6 +10,7 @@ class LoadingDialog(context: Context): Dialog(context) {
     override fun onCreate(savedInstanceState: Bundle?) {
         // test commit
         // test commit2
+        // test commit3
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_loading)
         window?.run {
