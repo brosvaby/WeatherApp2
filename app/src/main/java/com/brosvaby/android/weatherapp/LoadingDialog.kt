@@ -8,6 +8,7 @@ import android.os.Bundle
 
 class LoadingDialog(context: Context): Dialog(context) {
     override fun onCreate(savedInstanceState: Bundle?) {
+        // test commit
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_loading)
         window?.run {
